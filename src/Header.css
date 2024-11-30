@@ -108,10 +108,10 @@ input:checked + .slider:before {
 /* Media Query for devices with screen width less than 1024px (tablet) */
 @media (max-width: 1025px) {
   /* Adjust position for smaller screens */
-  .toggleMode {
+  /* .toggleMode {
     top: 26px;
     right: 15px;
-  }
+  } */
 
   /* Resize toggle switch for tablet */
   .toggle-switch {

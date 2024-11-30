@@ -5,10 +5,12 @@
   padding-right: 5rem;
   position: fixed;
   width: 100%;
-  height: clamp(60px, 16vh, 90px);
+  /* height: clamp(60px, 16vh, 90px); */
+  height: clamp(35px, 9vh, 85px);
   z-index: 10;
   background-color: var(--header-bg);
   color: var(--text-color);
+  /* position: relative; */
 }
 
 .navbar-container {
@@ -37,33 +39,33 @@
   margin-top: clamp(-1%, 0vw, 15%);
 }
 
-.nav-menu {
+.nav-menus {
   display: flex;
   color: var(--text-color);
   transition: left 0.5s ease;
 }
 
-.nav-menu li {
+.nav-menus li {
   padding: 0 1rem;
 }
 
-.nav-menu li a {
+.nav-menus li a {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-color) !important;
 }
 
-.nav-menu li a:hover {
+.nav-menus li a:hover {
   color: rgb(241, 237, 5);
   font-weight: 900;
   font-size: 1.3rem;
 }
 
-.hamburger {
+.hamburgers {
   display: none;
 }
 
-.side-menu {
+.side-menus {
   position: fixed;
   top: 0;
   left: -100%;
@@ -73,14 +75,14 @@
   color: white;
   transition: left 0.3s ease-in-out;
   padding-top: 60px;
-  z-index: 98;
+  z-index: 99;
 }
 
-.side-menu.active {
+.side-menus.actives {
   left: 0;
 }
 
-.close-btn {
+.close-btns {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -88,7 +90,7 @@
 }
 
 @media screen and (max-width: 1025px) {
-  .nav-menu {
+  .nav-menus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -96,24 +98,24 @@
     /* height: 100vh; */
     position: absolute;
     /* top: 90px; */
-    left: -100%;
+    /* left: -19%; */
     z-index: 99;
     transition: 0.5s;
   }
 
-  .nav-menu.active {
+  .nav-menus.actives {
     left: -17% !important;
   }
 
-  .nav-menu li {
+  .nav-menus li {
     padding: 1rem 0;
   }
 
-  .nav-menu li a {
+  .nav-menus li a {
     font-size: 1.2rem;
   }
 
-  .hamburger {
+  .hamburgers {
     display: block;
     position: absolute;
     top: 2rem;
@@ -122,7 +124,7 @@
     cursor: pointer;
   }
 
-  .hamburger > svg {
+  .hamburgers > svg {
     color: white;
   }
 }
