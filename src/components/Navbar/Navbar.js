@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import { useTheme } from "../../Theme.js";
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const { darkMode } = useTheme();
 
   const handleClick = () => {
-    console.log("Hamburger clicked");
     setClick(!click);
   };
+
   return (
     <div className={`header ${darkMode ? "dark" : "light"}`}>
       <div className="navbar-container">
@@ -20,7 +21,7 @@ const Navbar = () => {
             alt="logo"
             className="navlogo"
           />
-          <span className="navName" >Dhasneem</span>
+          <span className="navName">Dhasneem</span>
         </Link>
       </div>
       <div className="nav-right">
@@ -48,21 +49,12 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {/* <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <FaTimes size={18} style={{ color: "white" }} />
-        ) : (
-          <FaBars size={18} style={{ color: "white" }} />
-        )}
-      </div> */}
-      <div
-        className="hamburger"
-        onClick={() => console.log("Hamburger DIV clicked")}
-      >
+      {/* Hamburger Icon */}
+      <div className="hamburger" onClick={handleClick}>
         {click ? <FaTimes size={18} /> : <FaBars size={18} />}
       </div>
 
-      {/* Side menu */}
+      {/* Side Menu */}
       <div className={`side-menu ${click ? "active" : ""}`}>
         <div className="close-btn" onClick={handleClick}>
           <FaTimes size={30} style={{ color: "white" }} />
