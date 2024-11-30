@@ -157,8 +157,3 @@
     margin-left: -1rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 768px) {
-  .myname {
-    margin-top: 6% !important;
-  }
-}

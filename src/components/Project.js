@@ -18,7 +18,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -28,7 +28,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -38,7 +38,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -48,7 +48,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -58,7 +58,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -68,7 +68,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -78,7 +78,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -89,7 +89,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >
@@ -99,7 +99,7 @@ const Project = () => {
             <span
               style={{
                 color: "#ffcc00",
-                fontSize: "1.7rem",
+                fontSize: "clamp(1.2rem, 4vw, 2rem)",
                 fontWeight: "600",
               }}
             >

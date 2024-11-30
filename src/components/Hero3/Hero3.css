@@ -51,18 +51,26 @@ h1:hover {
 }
 
 .content3 .content_passage {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 2rem);
   font-weight: 500;
   color: white;
   z-index: 2;
   font-style: italic;
 }
- .content_header{
+/* .content_header3{
   font-size: 3rem;
+   font-size: clamp(2rem, 5vw, 3rem);
   padding: 0.6rem 0 1.5rem;
   color: white;
   z-index: 2;
- }
+ } */
+.content_header3 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-top: -7rem;
+  padding: 13.6rem 0 2.5rem;
+  color: white;
+  z-index: 2;
+}
 .hero3 .content3 {
   font-size: 4rem;
   padding: 0.6rem 0 1.5rem;
@@ -74,10 +82,10 @@ h1:hover {
   margin: 1rem 0.2rem;
 }
 @media screen and (max-width: 640px) {
-  .hero3 .content3 p {
+  /* .hero3 .content3 p {
     font-size: 1.3rem;
-  }
-  .hero3 .content3 h1 {
-    font-size: 2rem;
+  } */
+  .content_header3 {
+    margin-top: -11rem;
   }
 }

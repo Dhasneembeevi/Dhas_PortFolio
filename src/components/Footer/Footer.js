@@ -35,10 +35,7 @@ const Footer = () => {
             </Link>
           </div>
         </motion.div>
-        <div
-    
-          className={`rightfooter ${darkMode ? "dark" : "light"}`}
-        >
+        <div className={`rightfooter ${darkMode ? "dark" : "light"}`}>
           <div className="location">
             <a
               href="https://www.linkedin.com/in/dhasneembeevi/"
@@ -71,7 +68,7 @@ const Footer = () => {
           >
             <Link to="/contact">
               <button
-                className="footerbtn" 
+                className="footerbtn"
                 // ${darkMode ? "btn btn-light" : "btn btn-dark"}`}
               >
                 {" "}

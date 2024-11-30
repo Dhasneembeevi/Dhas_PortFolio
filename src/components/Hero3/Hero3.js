@@ -20,7 +20,7 @@ const Hero3 = (props) => {
       </div>
       <div className="content3">
         <div>
-          <h1 className="content_header">{heading}</h1>
+          <h1 className="content_header3">{heading}</h1>
           <p className="content_passage">{text1}</p>
         </div>
       </div>

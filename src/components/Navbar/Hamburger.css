@@ -1,27 +1,22 @@
-
-
-/* Mobile Hamburger */
 .hamburger-container {
   display: none;
 }
-
-/* When on small screens */
 @media (max-width: 769px) {
   .hamburger-container {
     display: block;
   }
-    .hamburger-container {
+  .hamburger-container {
     display: block;
     position: absolute;
-    top: 15px; /* Position from top */
-    right: 20px; /* Position from right */
+    top: 24px;
+    right: 20px;
     z-index: 100;
   }
- .hamburger {
-  display: block;
-  font-size: 24px;
-  cursor: pointer;
-}
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 
 .side-menu {
@@ -66,8 +61,6 @@
 .side-menu .nav-links li a:hover {
   background-color: #444;
 }
-
-/* Large screen - hide Hamburger */
 @media (min-width: 769px) {
   .hamburger-container {
     display: none;
