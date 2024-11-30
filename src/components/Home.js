@@ -5,6 +5,7 @@ import Footer from './Footer/Footer'
 import Work from "./Work/Work"
 import Myabout from './Myabout/Myabout'
 import Form from './Form/Form'
+import Certifications from './Certifications/Certifications'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero/>
       <Myabout/>
       <Work/>
+      <Certifications/>
       <Form/>
       <Footer/>
     </div>

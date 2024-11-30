@@ -1,98 +1,164 @@
+.footer {
+  animation: fadeIn 1s ease-in-out;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  justify-content: space-between;
+  cursor: grab;
+}
 
-   .footer {
-    background-color: #020000;
-    color: white;
-    padding: 2rem;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.myname {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  font-size: clamp(1.6rem, 4vw, 2.7rem);
+  font-weight: 600;
+  font-family: cursive;
+  display: inline-block;
+}
+
+.left {
+  display: flex;
+  text-align: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+.leftdiv {
+  width: min-content;
+}
+.logofooter {
+  width: clamp(64px, 7.5%, 150px);
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+.rightfooter {
+  flex: 1 1 100%;
+  display: flex;
+  float: right;
+  justify-content: flex-end;
+}
+.connect {
+  margin-top: 1%;
+  margin-left: 3%;
+  float: right;
+}
+.location {
+  margin-top: 1%;
+  margin-left: 3%;
+  float: right;
+}
+.fa-github,
+.fa-linkedin-in,
+.fa-instagram {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  float: right;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-github:hover,
+.fa-linkedin-in:hover,
+.fa-instagram:hover {
+  border-radius: 50%;
+  transition: 0.4s;
+  transform: scale(1.1);
+  color: var(--hover-color);
+}
+.fa-github:hover,
+.fa-linkedin-in:hover,
+.fa-instagram:hover .dark {
+  background-color: white !important;
+  color: black !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  to {
+    opacity: 1;
   }
-  
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.footerbtn {
+  float: right;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: 0.3s ease;
+}
+
+.btn-light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.footerbtn:hover {
+  transform: scale(1.05);
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .footerbtn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .myname {
+    margin-left: -19px;
+    margin-top: 12%;
+  }
+
   .left {
-    display: flex;
-    flex: 1 1 100%;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-left: -1rem;
   }
-  
-  .left span {
-    font-size: 2rem;
-    font-weight: 600;
+}
+@media screen and (min-width: 768px) and (max-width: 768px) {
+  .myname {
+    margin-top: 6% !important;
   }
-  
-  .logo {
-    width: 15%;
-    margin-left: 10%;
-  }
-  
-  .right {
-    flex: 1 1 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .fa-github,
-  .fa-linkedin-in,
-  .fa-instagram {
-    font-size: 3rem;
-    margin: 0.5rem;
-    margin-left: 1.7rem;
-    padding: 0.2rem;
-    color: white;
-  }
-  
-  .fa-github:hover,
-  .fa-linkedin-in:hover,
-  .fa-instagram:hover {
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    transition: 0.4s;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .left {
-      flex: 1 1 30%;
-      margin-bottom: 0;
-      text-align: left;
-    }
-  
-    .right {
-      flex: 1 1 70%;
-      justify-content: flex-end;
-    }
-    .connect{
-        margin-top: 1%;
-        margin-left: 3%;
-    }
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .left {
-      text-align: left;
-    }
-  
-    .logo {
-      width: 19%;
-      margin-top: -1%;
-    }
-    .connect{
-        margin-top: 1%;
-        margin-left: 3%;
-    }
-  
-    .left span {
-      font-size: 2.5rem;
-    }
-  
-    .fa-github,
-    .fa-linkedin-in,
-    .fa-instagram {
-      font-size: 4rem;
-      margin-left: 2rem;
-    }
-  }
+}

@@ -1,75 +1,327 @@
- .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-right: 4%;
-    gap: 1rem;
-    max-width: 1000px;
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 4%; */
+  gap: 2ch;
+  max-width: 100%;
+  padding: 2%;
 }
 .image-container img {
-    border-radius: 48%;
-    max-width: 195px;
-    max-height: 199px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  /* width: 16ch; */
+  width: clamp(
+    8rem,
+    10vw,
+    16rem
+  ); /* Clamp width to be between 8rem and 16rem based on viewport width */
+  height: clamp(8rem, 10vw, 16rem);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
-.react{
-    width:50% ;
-    height: 50%;
-    border-radius: 53%;
+
+.image-container img:hover {
+  transform: scale(1.1);
 }
-.python{
-    border-radius: 53%;
-    width:50% ;
-    height: 54%;
+.react {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 53%;
 }
-.node{
-    border-radius: 50%;
-    width:50% ;
-    height: 54%;
+.python {
+  border-radius: 53%;
+  width: 50%;
+  height: 54%;
 }
-.exp{
-    border-radius: 50%;
-    width:48%;
-    height: 45%;
+.node {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
 }
-.html{
-    border-radius: 50%;
-    width: 50%;
-    height: 60%;
+.exp {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
 }
-.db{
-    border-radius: 50%;
-    width:42%;
-    height: 54%;
+.html {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
 }
-.js{
-    border-radius: 50%;
-    width:42%;
-    height: 58%;
+.db {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
 }
-.css{
-    border-radius: 50%;
-    width:52%;
-    height: 58%;
+.js {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+.css {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+  height: 100%;
+}
+
+.pyt {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+.powerbi {
+  border-radius: 50%;
+  width: 11rem;
+  height: 11rem;
+}
+
+.sql {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+.chart {
+  margin-top: 2px;
+}
+.np {
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+.skill-head {
+  text-align: center;
+  /* padding: 4rem 0 2rem 0; */
+  font-size: clamp(2.1rem, 5vw, 4rem);
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.education {
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+  padding: 2%;
+}
+
+.edu-head {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+      margin-top: 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-list li:hover {
+  transform: translateY(-7px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.educationDetails {
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: column;
+}
+.institution-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.institution {
+  /* text-transform: uppercase; */
+  /* font-size: 1.6rem; */
+  /* font-size: clamp(1.2rem, 4vw, 2rem); */
+  font-size: clamp(1.2rem, 2vw, 4rem);
+  /* font-weight: 800; */
+  margin-top: 0;
+}
+.date {
+  color: #66ccff;
+  white-space: nowrap;
+  /* font-size: 1.2rem; */
+  font-weight: 500;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  white-space: normal; /* Allow text to wrap */
+  word-break: break-word; 
+  float: right;
+  text-align: right;
+}
+
+.degree {
+  color: #ffcc00;
+  font-weight: bold;
+  /* font-size: clamp(1.2rem, 4vw, 2rem); */
+  /* font-size: clamp(1.5rem, 3vw, 1rem); */
+  font-size: clamp(1.2rem, 3vw, 1rem);
+  /* font-weight: 700; */
+}
+.edu-list li:hover .date {
+  transform: translateY(-7px);
+}
+
+.edu-list li:hover .degree {
+  transform: translateY(-7px);
+}
+.exp-head {
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+  font-size: xxx-large;
+  text-align: center;
+}
+.timeline-container {
+  width: 85%;
+  margin: auto;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.timeline-item:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 4px;
+  background: #ffcc00;
+  z-index: -1;
+}
+
+.timeline-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #66ccff;
+  background: #000;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  width: 45%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item.left .timeline-content {
+  float: left;
+  text-align: right;
+  margin-right: auto;
+}
+
+.timeline-item.right .timeline-content {
+  float: right;
+  text-align: left;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.timeline-institution {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-role {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.timeline-description {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+  text-align: justify;
+}
+
+.timeline-description li {
+  margin: 5px 0;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid linear-gradient(45deg, #ffcc00, #66ccff);
+}
+.chart {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  /* background-color: #e4c134; */
+}
+@media screen and (max-width: 769px) {
+  .timeline-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem 0;
-    height: 100%;
+    margin-bottom: 20px;
   }
-  
-.skill-head {
+
+  .timeline-item:after {
+    content: none;
+  }
+
+  .timeline-date {
+    position: static;
+    margin-bottom: 10px;
+    transform: none;
+  }
+
+  .timeline-content {
+    width: 90%;
     text-align: center;
-    padding: 4rem 0 2rem 0;
-    font-size:xxx-large;
+    float: none;
+  }
 }
- 
-.image-container img:hover {
-    transform: scale(1.1);
-}
-  

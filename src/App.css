@@ -1,0 +1,119 @@
+/* App.css
+
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+body.light {
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(10, 10, 10);
+}
+
+body.dark {
+  --background-color: black;
+  --text-color: white;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio-background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-size: 400% 400%; 
+  animation: gradientAnimation 15s ease infinite; 
+}
+
+.content {
+  position: relative;
+  z-index: 0; 
+} */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated background for the portfolio
+.portfolio-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.giphy.com/media/PibNiNwK6hY0rcW0xt/giphy.gif")
+    no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+.maincontent {
+  z-index: 1;
+}
+
+.mainoverlay {
+  /* position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0; 
+} */
+
+body.dark {
+  --background-color: black;
+  --text-color: white;
+}
+
+body.light {
+  --background-color: white;
+  --text-color: black;
+}

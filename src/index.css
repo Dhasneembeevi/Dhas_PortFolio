@@ -1,28 +1,30 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600&display=swap');
-
-*{
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600&display=swap");
+/* global css */
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Outfit', sans-serif;
-  font-family: 'Source Sans Pro', sans-serif;;
+  font-family: "Outfit", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-body{
+/* body {
   background-color: black;
-}
+} */
 
-h1,h4,p,a{
+h1,
+h4,
+p,
+a {
   color: white;
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-.btn{
+.btn {
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
@@ -32,13 +34,54 @@ ul{
   font-weight: 600;
   cursor: pointer;
 }
-.btn-light{
+.btn-light {
   background: transparent;
   color: white;
 }
 
-.btn:hover{
+.btn:hover {
   background: grey;
-  color:white;
+  color: white;
   transition: 0.3s;
 }
+/*  */
+/* :root {
+  --background-color: white;
+  --text-color: black;
+  --hover-color: rgb(241, 237, 5);
+  --header-bg: white;
+  --menu-bg: white;
+  --link-color: black;
+} */
+
+/* Define dark mode variables */
+.dark {
+  --background-color: black;
+  --text-color: white;
+  --hover-color: rgb(241, 237, 5);
+  --header-bg: black;
+  --menu-bg: black;
+  --link-color: white;
+}
+.light {
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(0, 0, 0);
+  --hover-color: rgb(5, 88, 241);
+  --header-bg: rgb(255, 255, 255);
+  --menu-bg: black;
+  --link-color: white;
+}
+/* Apply variables globally */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+/* svg{
+  display: none;
+} */

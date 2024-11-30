@@ -1,62 +1,187 @@
-.pro-heading{
-    text-align: center;
-    padding: 4rem 0 2rem 0;
+.proheading {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  font-weight: 700;
+  /* font-size: clamp(2rem, 3vw, 3.5rem); */
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  /* color: var(--text-color); */
+  /* width: auto; */
 }
 
+.proheading:hover {
+  transition: 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+.filterbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 3%;
+  /* justify-content: s;
+   */
+  gap: 10px;
+}
+
+.filterbuttons:hover .dark {
+  background-color: yellow;
+  color: black;
+  border: 2px solid var(--text-color);
+}
+.catbtn {
+  /* padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease; */
+
+  padding: 8px 16px; /* Adjust padding for better responsiveness */
+  margin: 5px; /* Add spacing between buttons */
+  border: none;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+  border-radius: 5px;
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.catbtn.active {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
 .all-projects {
-    max-width: 1140px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem; 
-    padding-bottom: 2rem;
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* max-width: 1140px; */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* grid-gap: 2rem; */
+  padding-bottom: 2rem;
 }
 
-.project-container{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+.project-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 500px; /* Limit the maximum size for large screens */
+  min-width: 300px;
 }
 
-.project-card{
-    background: rgb(28, 28, 15);
-    padding: 1.2rem 1rem;
-    border-radius: 10px;
+.project-card {
+  background: rgb(28, 28, 15);
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  /* transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; */
+  width: 90%;
+  max-width: 450px; /* Limit the maximum size for large screens */
+  min-width: 250px; /* Ensure it doesn't shrink too much */
+  margin: 0 auto;
 }
 
-.project-card img{
-    width: 100%;
-    border-radius: 10px;
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.project-title{
-    color: white;
-    padding: 1rem 0;
+.project-title {
+  color: white;
+  padding: 1rem 0;
+  font-size: clamp(1.2rem, 1.5vw, 3rem);
 }
 
-.project-details p{
-    padding-bottom: 1rem;
-    font-size: 1.1rem;
-    text-align: justify;
+.project-details p {
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  text-align: justify;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.project-description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
 }
 
-.project-details .btn{
-    margin: 1rem 4.5rem;
+.project-details .btn {
+  /* margin: 1rem 4.5rem; */
+
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e9bc09;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-card:hover{
-    background: rgb(22, 21, 21);
-    transition: 0.3s ease-in-out;
-    transform: scale(1.2);
+.project-card:hover {
+  background: rgb(22, 21, 21);
+  transition: 0.3s ease-in-out;
+  transform: scale(0.9);
+}
+/* Common Button Style */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* GitHub Button Style */
+.btn-github {
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn-github:hover {
+  background-color: #e9bc09;
+  color: #030303;
+}
+
+/* View Button Style */
+.btn-view {
+  background-color: #e9bc09;
+  color: #030303;
+  /* align-items: right; */
+}
+
+.btn-view:hover {
+  background-color: #0c0c0c;
+  color: #e9bc09;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Positions buttons at corners */
+  align-items: center;
+  margin-top: 1rem;
+}
 @media screen and (max-width: 740px) {
-    .all-projects {
-        grid-template-columns: 1fr; 
-        grid-gap: 1rem; 
-    }
+  .all-projects {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .proheading {
+    font-size: 2rem;
+  }
 
-    .project-container{
-        margin-bottom: 1rem;
-    }
+  .project-container {
+    margin-bottom: 1rem;
+  }
+  .filterbuttons {
+    justify-content: center; /* Center buttons on smaller screens */
+  }
 }
