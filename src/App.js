@@ -1,53 +1,5 @@
-// import React, { useState, useEffect } from "react";
-// import { Route, Routes } from "react-router-dom";
-// import Home from "./components/Home";
-// import About from "./components/About";
-// import Project from "./components/Project";
-// import Contact from "./components/Contact";
-// import Header from "./Header";
-// import "./App.css";
-// // import AnimatedComp from "./Animations/AnimatedComp.js";
-
-// // import { useTheme } from "./Theme.js";
-// const App = () => {
-//   // const { dark } = useTheme();
-//   const [darkMode, setDarkMode] = useState(false);
-
-//   useEffect(() => {
-//     const savedMode = localStorage.getItem("darkMode");
-//     if (savedMode === "true") {
-//       setDarkMode(true);
-//     }
-//   }, []);
-//   const toggleDarkMode = () => {
-//     setDarkMode(!darkMode);
-//     localStorage.setItem("darkMode", !darkMode);
-//   };
-
-//   return (
-//     <div>
-//       <div className="portfolio-background"></div> {/* Animated Background */}
-//       <div className="content">
-//         <div className={darkMode ? "dark" : "light"}>
-//           {" "}
-//           <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />{" "}
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/about" element={<About />} />
-//             <Route path="/project" element={<Project />} />
-//             <Route path="/contact" element={<Contact />} />
-//           </Routes>
-//           {/* <AnimatedComp /> */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Project from "./components/Project";
@@ -55,9 +7,13 @@ import Contact from "./components/Contact";
 import Header from "./Header";
 import "./App.css";
 import Certifications from "./components/Certifications/Certifications.js";
+import ReactGA from "react-ga4";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    ReactGA.initialize("G-CYSENCBGTE");
+  }, []);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
@@ -65,6 +21,18 @@ const App = () => {
       setDarkMode(true);
     }
   }, []);
+  const usePageTracking = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+    }, [location]);
+  };
+
+  const PageTracker = () => {
+    usePageTracking();
+    return null;
+  };
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -81,6 +49,7 @@ const App = () => {
       <div className="mainoverlay"></div>
       <div className="maincontent">
         <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+        <PageTracker /> {/* Track page views using Google Analytics */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
