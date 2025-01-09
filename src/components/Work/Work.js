@@ -34,8 +34,8 @@ const projects = [
     category: "Machine Learning",
     tech: "Python, Hugging Face Transformers, BLIP Model, Tkinter, Pillow (PIL)",
     image: caption,
-    github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
-    view: "https://youtu.be/DxqqBLMHjyY",
+    github: "https://github.com/Dhasneembeevi/Caption-Genie-App",
+    view: "https://github.com/Dhasneembeevi/Caption-Genie-App",
   },
   {
     name: "Classifying Cybersecurity Incidents",
