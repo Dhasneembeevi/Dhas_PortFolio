@@ -56,7 +56,7 @@ const Myabout = () => {
   const experienceData = [
     {
       institution: "GUVI Chennai, Chennai.",
-      date: "Apr 2024 - Present",
+      date: "Apr 2024 - Oct 2024",
       role: "AI & Machine Learning Course",
       description: [
         "Proficient in <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'>  Python </span> and <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> SQL </span> for data access and analysis, applying  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> ML algorithms </span>to build predictive models by  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> data preprocessing </span> and  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> feature engineering </span> to improve model accuracy and robustness.",
@@ -66,7 +66,7 @@ const Myabout = () => {
     },
     {
       institution: "SharePoint Designs, Chennai.",
-      date: "Jul 2023 - Present",
+      date: "Jul 2023 - Dec 2024",
       role: "SharePoint Developer",
       description: [
         "Implemented  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> UI/UX </span> designs in  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> React </span> for optimal user experiences, creating custom solutions within the  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> SharePoint environment.",
@@ -78,7 +78,7 @@ const Myabout = () => {
       date: "Jul 2022 - Jun 2023",
       role: "Full Stack Developer Trainee",
       description: [
-        "Intensive training in  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'>  Data Structures, Algorithms,</span> and full-stack development  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> (MERN) </span> with expertise in  < style='color: #ffcc00; font-size:1.1rem; font-weight:600'> JavaScript, Node.js </span> and  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> React.js.</span> ",
+        "Intensive training in <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> Data Structures, Algorithms </span> and full-stack development <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> (MERN) </span> with expertise in  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> JavaScript, Node.js </span> and <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> React.js.</span> ",
       ],
     },
   ];
@@ -181,6 +181,11 @@ const Myabout = () => {
         <ul className="edu-list">
           {[
             {
+              institution: "Guvi Institute, Coimbatore, Tamil Nadu",
+              date: "Apr 2024 - Oct 2024",
+              degree: "Artificial Intelligence and Machine Learning Program",
+            },
+            {
               institution:
                 "TamilNadu Agriculture University, Coimbatore, Tamil Nadu",
               date: "Aug 2016 - Nov 2020",
@@ -201,10 +206,13 @@ const Myabout = () => {
             >
               <div className="educationDetails">
                 <div className="institution-container">
-                  <div className="institution">{edu.institution}</div>
+                  {/* <div className="institution">{edu.institution}</div> */}
+                  <div className="degree">{edu.degree}</div>
                   <div className="date">{edu.date}</div>
                 </div>
-                <div className="degree">{edu.degree}</div>
+                {/* <div className="degree">{edu.degree}</div>
+                 */}
+                <div className="institution">{edu.institution}</div>
               </div>
               {/* <span className="degree">{edu.degree}</span> */}
             </motion.li>

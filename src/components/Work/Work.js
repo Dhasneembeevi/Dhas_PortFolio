@@ -5,6 +5,8 @@ import img from "../../Asserts/pro1.png";
 import youtube from "../../Asserts/youtube.jpg";
 import car from "../../Asserts/car.jpg";
 import plant from "../../Asserts/plant.jpg";
+import movie from "../../Asserts/movie.jpg";
+import caption from "../../Asserts/caption.jpg";
 import cyber from "../../Asserts/cyber.png";
 import data from "../../Asserts/data.png";
 import eventProp from "../../Asserts/eventprop.png";
@@ -16,6 +18,22 @@ const projects = [
     category: "Machine Learning",
     tech: "Python, Streamlit, PyTorch",
     image: plant,
+    github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
+    view: "https://youtu.be/DxqqBLMHjyY",
+  },
+  {
+    name: "Movie Recommendation System",
+    category: "Machine Learning",
+    tech: "Python, Streamlit, Scikit-learn",
+    image: movie,
+    github: "https://github.com/Dhasneembeevi/Movie-Recommendation-System",
+    view: "https://www.youtube.com/watch?v=HP29fUAd-4s",
+  },
+  {
+    name: "Image Caption Generator",
+    category: "Machine Learning",
+    tech: "Python, Hugging Face Transformers, BLIP Model, Tkinter, Pillow (PIL)",
+    image: caption,
     github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
     view: "https://youtu.be/DxqqBLMHjyY",
   },
@@ -36,7 +54,7 @@ const projects = [
     view: "https://www.youtube.com/watch?v=ZUw9IYSA5Mc",
   },
   {
-    name: "DataSpark: Illuminating Insights for Global Electronics",
+    name: "Illuminating Insights",
     category: "Machine Learning",
     tech: "Python, SQL, Power BI, Data Visualization",
     image: data,

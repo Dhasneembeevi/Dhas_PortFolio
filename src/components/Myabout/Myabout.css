@@ -107,8 +107,6 @@
   transform: scale(1.1);
 }
 
-
-
 .education {
   margin: 20px 0;
   color: white;
@@ -126,7 +124,7 @@
   list-style: none;
   padding: 0;
   text-align: left;
-      margin-top: 5%;
+  margin-top: 5%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -159,7 +157,8 @@
   /* text-transform: uppercase; */
   /* font-size: 1.6rem; */
   /* font-size: clamp(1.2rem, 4vw, 2rem); */
-  font-size: clamp(1.2rem, 2vw, 4rem);
+  /* font-size: clamp(1.2rem, 2vw, 4rem); */
+  font-size: clamp(1.2rem, 3vw, 1rem);
   /* font-weight: 800; */
   margin-top: 0;
 }
@@ -170,7 +169,7 @@
   font-weight: 500;
   font-size: clamp(1.2rem, 3vw, 1.4rem);
   white-space: normal; /* Allow text to wrap */
-  word-break: break-word; 
+  word-break: break-word;
   float: right;
   text-align: right;
 }
@@ -180,7 +179,8 @@
   font-weight: bold;
   /* font-size: clamp(1.2rem, 4vw, 2rem); */
   /* font-size: clamp(1.5rem, 3vw, 1rem); */
-  font-size: clamp(1.2rem, 3vw, 1rem);
+  /* font-size: clamp(1.2rem, 3vw, 1rem); */
+  font-size: clamp(1.2rem, 2vw, 4rem);
   /* font-weight: 700; */
 }
 .edu-list li:hover .date {

@@ -34,7 +34,7 @@ const Navbar = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="/Dhasneem_ML_Engineer_.pdf" download="Dhasneem_Resume.pdf">
+            <a href="/Dhasneem_ML_Engineer.pdf" download="Dhasneem_Resume.pdf">
               <FaDownload
                 size={19}
                 style={{ color: "rgb(11, 107, 232)", marginRight: "8px" }}
@@ -74,7 +74,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="/Dhasneem_ML_Engineer_.pdf" download="Dhasneem_Resume.pdf">
+            <a href="/Dhasneem_ML_Engineer.pdf" download="Dhasneem_Resume.pdf">
               <FaDownload
                 size={19}
                 style={{ color: "rgb(11, 107, 232)", marginRight: "8px" }}
