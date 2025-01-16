@@ -12,6 +12,11 @@ const certifications = [
     year: "2024",
   },
   {
+    name: "Introduction to Data Engineering and Bigdata",
+    provider: "GUVI Institute",
+    year: "2025",
+  },
+  {
     name: "Generative AI Program",
     provider: "GUVI Institute",
     year: "2024",
