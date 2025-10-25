@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="header">
       <div className="navbar-container">
-        <Link to="/">
+        <Link to="/" className="brand">
           <img
             src="https://us.123rf.com/450wm/hamdesain/hamdesain2002/hamdesain200200048/142445320-letter-d-beauty-women-face-logo-design-vector.jpg?ver=6"
             alt="logo"
@@ -34,7 +34,10 @@ const Navbar = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="/Dhasneem_ML_Engineer.pdf" download="Dhasneem_Resume.pdf">
+            <a
+              href="/Dhasneem_Beevi_Resume__.docx"
+              download="Dhasneem_Resume.docx"
+            >
               <FaDownload
                 size={19}
                 style={{ color: "rgb(11, 107, 232)", marginRight: "8px" }}

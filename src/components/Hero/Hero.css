@@ -12,28 +12,28 @@
   position: relative;
 }
 
- .message-popup {
+.message-popup {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #333; 
-  color: #fff; 
+  background-color: #333;
+  color: #fff;
   padding: 20px;
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
   z-index: 1000;
-  width: 80%; 
-  max-width: 400px; 
-  min-width: 200px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-  word-wrap: break-word; 
+  width: 80%;
+  max-width: 400px;
+  min-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
 }
 
 .popupmsg {
   font-style: normal;
-  margin: 0; 
+  margin: 0;
 }
 
 button {
@@ -70,7 +70,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   object-fit: cover;
-  margin-top: clamp(5%, 2vh, 10%);
+  /* margin-top: clamp(5%, 2vh, 10%); */
 }
 
 .mask::after {

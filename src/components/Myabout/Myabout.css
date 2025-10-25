@@ -3,19 +3,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* margin-right: 4%; */
   gap: 2ch;
   max-width: 100%;
   padding: 2%;
 }
 .image-container img {
   border-radius: 50%;
-  /* width: 16ch; */
-  width: clamp(
-    8rem,
-    10vw,
-    16rem
-  ); /* Clamp width to be between 8rem and 16rem based on viewport width */
+  width: clamp(8rem, 10vw, 16rem);
   height: clamp(8rem, 10vw, 16rem);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
@@ -89,9 +83,6 @@
   width: 12rem;
   height: 12rem;
 }
-.chart {
-  margin-top: 2px;
-}
 .np {
   border-radius: 50%;
   width: 12rem;
@@ -99,7 +90,6 @@
 }
 .skill-head {
   text-align: center;
-  /* padding: 4rem 0 2rem 0; */
   font-size: clamp(2.1rem, 5vw, 4rem);
 }
 
@@ -154,21 +144,15 @@
   width: 100%;
 }
 .institution {
-  /* text-transform: uppercase; */
-  /* font-size: 1.6rem; */
-  /* font-size: clamp(1.2rem, 4vw, 2rem); */
-  /* font-size: clamp(1.2rem, 2vw, 4rem); */
   font-size: clamp(1.2rem, 3vw, 1rem);
-  /* font-weight: 800; */
   margin-top: 0;
 }
 .date {
   color: #66ccff;
   white-space: nowrap;
-  /* font-size: 1.2rem; */
   font-weight: 500;
   font-size: clamp(1.2rem, 3vw, 1.4rem);
-  white-space: normal; /* Allow text to wrap */
+  white-space: normal;
   word-break: break-word;
   float: right;
   text-align: right;
@@ -177,11 +161,7 @@
 .degree {
   color: #ffcc00;
   font-weight: bold;
-  /* font-size: clamp(1.2rem, 4vw, 2rem); */
-  /* font-size: clamp(1.5rem, 3vw, 1rem); */
-  /* font-size: clamp(1.2rem, 3vw, 1rem); */
   font-size: clamp(1.2rem, 2vw, 4rem);
-  /* font-weight: 700; */
 }
 .edu-list li:hover .date {
   transform: translateY(-7px);
@@ -294,13 +274,7 @@
   transition: all 0.3s ease-in-out;
   border: 2px solid linear-gradient(45deg, #ffcc00, #66ccff);
 }
-.chart {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  /* background-color: #e4c134; */
-}
+
 @media screen and (max-width: 769px) {
   .timeline-item {
     display: flex;
@@ -323,5 +297,40 @@
     width: 90%;
     text-align: center;
     float: none;
+  }
+}
+.chart {
+  width: 100%;
+  max-width: 900px;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 58vh;
+  max-height: 100vh;
+  min-height: 250px;
+}
+
+@media (max-width: 1024px) {
+  .chart-container {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 35vh;
+    min-height: 220px;
   }
 }

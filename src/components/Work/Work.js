@@ -5,6 +5,7 @@ import img from "../../Asserts/pro1.png";
 import youtube from "../../Asserts/youtube.jpg";
 import car from "../../Asserts/car.jpg";
 import plant from "../../Asserts/plant.jpg";
+import docimg from "../../Asserts/docimg.jpg";
 import movie from "../../Asserts/movie.jpg";
 import caption from "../../Asserts/caption.jpg";
 import cyber from "../../Asserts/cyber.png";
@@ -14,12 +15,54 @@ import insta from "../../Asserts/insta.png";
 import { useTheme } from "../../Theme.js";
 const projects = [
   {
+    name: "DocFinder AI — Local AI-Powered Document Assistant",
+    category: "Machine Learning",
+    tech: "Python, Streamlit, FAISS, Hugging Face Transformers",
+    image: docimg,
+    github:
+      "https://github.com/Dhasneembeevi/DocFinder-AI---Local-AI-for-Document-Q-A",
+    view: "https://github.com/Dhasneembeevi/DocFinder-AI---Local-AI-for-Document-Q-A",
+  },
+  {
     name: "Plant Disease Detection using CNN",
     category: "Machine Learning",
     tech: "Python, Streamlit, PyTorch",
     image: plant,
     github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
     view: "https://youtu.be/DxqqBLMHjyY",
+  },
+  {
+    name: "SentimentSphere: Streamlit app for sentiment analysis with text and CSV input support",
+    category: "Machine Learning",
+    tech: "Python, Streamlit, NLTK, TextBlob, Pandas",
+    image: plant,
+    github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
+    view: "https://youtu.be/DxqqBLMHjyY",
+  },
+  {
+    name: "ChurnIQ – Intelligent churn detection system",
+    category: "Machine Learning",
+    tech: "Python, Streamlit, Scikit-learn",
+    image: plant,
+    github: "https://github.com/Dhasneembeevi/Plant_Disease_Detection",
+    view: "https://youtu.be/DxqqBLMHjyY",
+  },
+  {
+    name: "OCR Text Extractor",
+    category: "Machine Learning",
+    tech: "Python, EasyOCR, Streamlit, Pillow, OpenCV, NumPy, CNN (Deep Learning)",
+    image: plant,
+    github: "https://github.com/Dhasneembeevi/OCR-Text-Extractor",
+    view: "https://youtu.be/DxqqBLMHjyY",
+  },
+  {
+    name: "NER Explorer: Interactive Named Entity Recognition Tool",
+    category: "Machine Learning",
+    tech: "Python, Streamlit, SpaCy, NER, Matplotlib",
+    image: plant,
+    github:
+      "https://github.com/Dhasneembeevi/NER-Explorer-Interactive-Named-Entity-Recognition-Tool",
+    view: "https://github.com/Dhasneembeevi/NER-Explorer-Interactive-Named-Entity-Recognition-Tool",
   },
   {
     name: "Movie Recommendation System",
@@ -40,7 +83,7 @@ const projects = [
   {
     name: "Classifying Cybersecurity Incidents",
     category: "Machine Learning",
-    tech: "Python, scikit-learn, Matplotlib, Seaborn",
+    tech: "Python, Scikit-learn, Matplotlib, Seaborn",
     image: cyber,
     github: "https://github.com/Dhasneembeevi/CyberSecurity_Incidents",
     view: "https://github.com/Dhasneembeevi/CyberSecurity_Incidents",

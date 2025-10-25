@@ -1,159 +1,222 @@
 .footer {
   animation: fadeIn 1s ease-in-out;
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
-  justify-content: space-between;
-  cursor: grab;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   width: 100%;
+  cursor: grab;
+  /* allow footer to size naturally */
+  box-sizing: border-box;
+  padding: 1rem 0;
 }
 
-.myname {
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  font-size: clamp(1.6rem, 4vw, 2.7rem);
-  font-weight: 600;
-  font-family: cursive;
-  display: inline-block;
+/* main container */
+.footer-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* allow stacking on small screens */
 }
 
+/* left area: logo + name */
 .left {
   display: flex;
-  text-align: center;
+  align-items: center;
   gap: clamp(0.5rem, 2vw, 1rem);
-}
-.leftdiv {
-  width: min-content;
-}
-.logofooter {
-  width: clamp(64px, 7.5%, 150px);
-  border-radius: 50%;
-  margin-right: 0;
+  min-width: 0; /* important so children can shrink */
 }
 
-.rightfooter {
-  flex: 1 1 100%;
+/* ensures motion wrapper doesn't force width */
+.leftdiv {
   display: flex;
-  float: right;
+  align-items: center;
+}
+
+/* logo */
+.logofooter {
+  width: clamp(48px, 6vw, 110px);
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* name */
+.myname {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  font-family: cursive;
+  margin-left: 0.5rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 22ch;
+}
+
+/* right area: icons + connect button */
+.rightfooter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   justify-content: flex-end;
+  flex: 1 1 360px; /* allow it to shrink/grow; min logical size */
+  min-width: 0;
 }
-.connect {
-  margin-top: 1%;
-  margin-left: 3%;
-  float: right;
-}
+
+/* social icons container */
 .location {
-  margin-top: 1%;
-  margin-left: 3%;
-  float: right;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+/* icon styles */
 .fa-github,
 .fa-linkedin-in,
 .fa-instagram {
-  background-color: var(--header-bg);
+  background-color: transparent;
   color: var(--text-color);
-  float: right;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin: 0.5rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  margin: 0 0.25rem;
   transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border-radius: 8px;
 }
 
+/* hover */
 .fa-github:hover,
 .fa-linkedin-in:hover,
 .fa-instagram:hover {
-  border-radius: 50%;
-  transition: 0.4s;
-  transform: scale(1.1);
+  transform: scale(1.08);
   color: var(--hover-color);
 }
-.fa-github:hover,
-.fa-linkedin-in:hover,
-.fa-instagram:hover .dark {
-  background-color: white !important;
-  color: black !important;
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* connect button */
+.connect {
+  display: flex;
+  align-items: center;
 }
 
 .footerbtn {
-  float: right;
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   border: 2px solid var(--text-color);
-  border-radius: 5px;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  background-color: 0.3s ease;
+  background: transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease,
+    color 0.15s ease;
+  background-color: #ffcc00;
 }
 
-.btn-light {
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.btn-dark {
-  background-color: #333;
-  color: #f9f9f9;
-}
-
+/* hover */
 .footerbtn:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  /* background-color: var(--hover-bg-color);
+  color: var(--hover-text-color); */
   background-color: var(--hover-bg-color);
   color: var(--hover-text-color);
 }
 
-@media screen and (max-width: 768px) {
-  .footerbtn {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
-    float: right;
+/* small screens: stack left + right vertically */
+@media (max-width: 720px) {
+  .footer-container {
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
+
+  /* stack and center both blocks */
+  .left,
+  .rightfooter {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .myname {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .rightfooter {
+    margin-top: 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .location {
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 426px) {
+/* tiny phones: hide name if space critical */
+@media (max-width: 360px) {
   .myname {
-    margin-left: -19px;
-    margin-top: 12%;
+    display: none;
   }
 
-  .left {
-    margin-left: -1rem;
+  .logofooter {
+    width: clamp(40px, 10vw, 64px);
+  }
+
+  .fa-github,
+  .fa-linkedin-in,
+  .fa-instagram {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+  }
+
+  .footerbtn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+/* 📱 Small screens: hide name and keep footer items in one row */
+@media (max-width: 600px) {
+  /* hide name to save space */
+  .myname {
+    display: none;
+  }
+
+  /* main footer layout — one row */
+  .footer-container {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* logo, icons, and button all in one line */
+  .left,
+  .rightfooter,
+  .location,
+  .connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .logofooter {
+    width: clamp(40px, 8vw, 60px);
+  }
+
+  .fa-github,
+  .fa-linkedin-in,
+  .fa-instagram {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    margin: 0 0.25rem;
+  }
+
+  .footerbtn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
   }
 }

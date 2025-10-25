@@ -55,6 +55,18 @@ const skillsData = {
 const Myabout = () => {
   const experienceData = [
     {
+      institution: "MeNeM Inc., Chennai, Tamil Nadu",
+      date: "Mar 2025 – Jun 2025",
+      role: "AI Engineer Intern",
+      description: [
+        "Designed a real-time computer vision system using <span style='color:#ffcc00;font-weight:600'>YOLOv8</span> for weapon and violence detection, achieving <strong>89% accuracy</strong>. Integrated <span style='color:#ffcc00;font-weight:600'>OpenPose</span> & <span style='color:#ffcc00;font-weight:600'>MediaPipe</span> for emotion and pose-based alerts, enhancing surveillance responsiveness.",
+        "Developed a <span style='color:#ffcc00;font-weight:600'>FastAPI</span>-powered web scraper to extract product specifications and live prices from Flipkart and Amazon, enabling predictive retail analytics for appliances.",
+        "Built a <span style='color:#ffcc00;font-weight:600'>Streamlit</span>-based AI assistant integrating <span style='color:#ffcc00;font-weight:600'>PandasAI</span> + <span style='color:#ffcc00;font-weight:600'>OpenAI APIs</span> to allow natural language querying of CSV data, delivering visual and tabular analytics with <strong>95% response accuracy</strong>.",
+        "Deployed production-grade ML models optimized for real-time inference with GPU acceleration, achieving <strong>sub-100ms latency</strong>.",
+        "Collaborated with cross-functional teams to design end-to-end AI pipelines ensuring scalability, reproducibility, and efficient model lifecycle management.",
+      ],
+    },
+    {
       institution: "GUVI Chennai, Chennai.",
       date: "Apr 2024 - Oct 2024",
       role: "AI & Machine Learning Course",
@@ -66,11 +78,16 @@ const Myabout = () => {
     },
     {
       institution: "SharePoint Designs, Chennai.",
-      date: "Jul 2023 - Dec 2024",
+      date: "Jul 2023 - Jan 2025",
       role: "SharePoint Developer",
       description: [
-        "Implemented  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> UI/UX </span> designs in  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> React </span> for optimal user experiences, creating custom solutions within the  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> SharePoint environment.",
-        "Designed and deployed  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> Power Apps </span> and  <span style='color: #ffcc00; font-size:1.1rem; font-weight:600'> Power Automate </span> solutions to streamline data workflows and business processes, integrating AI for predictive insights.",
+        "Developed and deployed custom <span style='color:#ffcc00;font-weight:600'>SharePoint Framework (SPFx)</span> solutions using <span style='color:#ffcc00;font-weight:600'>React</span>, <span style='color:#ffcc00;font-weight:600'>Fluent UI</span>, and <span style='color:#ffcc00;font-weight:600'>PnP controls</span>, improving navigation and content discoverability by <strong>30%</strong>.",
+        "Created a dynamic Document Library Carousel using Fluent UI DocumentCard and integrated <span style='color:#ffcc00;font-weight:600'>FileTypeIcon</span>, <span style='color:#ffcc00;font-weight:600'>REST API</span>, and editor profile image fetching via custom logic.",
+        "Enhanced the Video and Event modules with configurable property-pane color and layout options, improving content flexibility and client satisfaction.",
+        "Automated workflows using <span style='color:#ffcc00;font-weight:600'>Power Apps</span> and <span style='color:#ffcc00;font-weight:600'>Power Automate</span>, reducing manual operations by <strong>50%</strong> and improving process efficiency.",
+        "Resolved critical issues in Korzone and Nalka modules, including email attachment rendering and event box encoding, ensuring stability and consistency across deployments.",
+        "Collaborated directly with clients such as <strong>Nalka</strong>, <strong>Potential Project</strong>, and <strong>Interogo</strong> for requirement analysis, iterative testing, and deployment, maintaining transparent communication and achieving over <strong>80% client satisfaction</strong>.",
+        "Delivered sandbox testing and production deployments maintaining system uptime above <strong>90%</strong> and ensuring consistent UI/UX across sites.",
       ],
     },
     {
@@ -173,7 +190,17 @@ const Myabout = () => {
         </div>
       </div>
       <div className="chart">
-        <Bar data={skillsData} />
+        <div className="chart-container">
+          <Bar
+            data={skillsData}
+            options={{
+              responsive: true,
+              maintainAspectRatio: false,
+              resizeDelay: 200,
+              animation: { duration: 1200, easing: "easeOutQuart" },
+            }}
+          />
+        </div>
       </div>
 
       <div className="education" style={{ width: "85%", margin: "auto" }}>
