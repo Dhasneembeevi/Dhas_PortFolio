@@ -61,7 +61,6 @@
   max-width: 18ch;
 }
 
-/* right side: nav + download button */
 .nav-right {
   display: flex;
   align-items: center;
@@ -69,7 +68,6 @@
   margin-left: auto;
 }
 
-/* top-level nav links (desktop) */
 .nav-menus {
   display: flex;
   gap: 0.75rem;
@@ -92,7 +90,6 @@
   color: var(--text-color);
   text-decoration: none;
   transition: transform 0.15s ease, color 0.15s ease;
-  /* removed font-size transition to avoid layout jumps */
 }
 
 .nav-menus li a:hover,
@@ -101,12 +98,10 @@
   transform: translateY(-2px);
 }
 
-/* Hide hamburger by default (only shown on small screens) */
 .hamburgers {
   display: none;
 }
 
-/* Side menu (mobile) */
 .side-menus {
   position: fixed;
   top: 0;
@@ -133,7 +128,6 @@
   cursor: pointer;
 }
 
-/* Make the nav items inside side menu vertical */
 .side-menus .nav-menus {
   flex-direction: column;
   padding-left: 1rem;
@@ -144,10 +138,26 @@
   padding: 1rem 0;
 }
 
-/* Tablet and below: hide inline nav, show hamburger */
 @media screen and (max-width: 1024px) {
   .nav-menus {
     display: none;
+  }
+  .nav-menus.actives {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 75%;
+    max-width: 320px;
+    background: var(--header-bg);
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 2000;
+    gap: 3rem;
+    height: 100vh;
   }
   .hamburgers {
     display: block;
@@ -157,7 +167,6 @@
   }
 }
 
-/* Small phones: adjust spacing, stack logo+name vertically if needed */
 @media screen and (max-width: 480px) {
   .header {
     padding: 0 1rem;
@@ -174,7 +183,6 @@
   }
 }
 
-/* Mobile stacking for brand */
 @media (max-width: 480px) {
   .brand {
     flex-direction: row;
@@ -189,28 +197,24 @@
   }
 }
 
-/* Very small phones: show only logo */
 @media (max-width: 360px) {
   .navName {
     display: none;
   }
 }
 
-/* small accessibility/tap targets */
 .nav-menus li a,
 .side-menus .nav-menus li a {
   padding: 0.35rem 0.5rem;
   border-radius: 6px;
 }
 
-/* focus outline for keyboard users */
 .nav-menus li a:focus,
 .side-menus .nav-menus li a:focus {
   outline: 2px solid rgba(255, 204, 51, 0.9);
   outline-offset: 2px;
 }
 
-/* optional: ensure header doesn't overlap content (remove if handled elsewhere) */
 body {
   padding-top: clamp(48px, 9vh, 85px);
 }
