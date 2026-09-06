@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import mypic from "../../Asserts/mypic.png";
+// import mypic from "../../Asserts/mypic.png";
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({
