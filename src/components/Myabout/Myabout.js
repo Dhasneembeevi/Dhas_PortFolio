@@ -171,8 +171,7 @@ const Myabout = () => {
           <img
             src="https://images7.webydo.com/90/9098746/3958/46d2d005-1b02-4961-aa1d-0aba7f7209bd.jpg"
             alt="logo"
-            className="css"
-          />
+            className="css"/>
           // <img
           //   src="https://academyclass.com/wp-content/uploads/2021/10/Javascript.png"
           //   alt="logo"
