@@ -5,6 +5,7 @@ import html from "../../Asserts/html.png";
 import node from "../../Asserts/node.png";
 import exp from "../../Asserts/exp.png";
 import db from "../../Asserts/db.png";
+import js from "../../Asserts/js.png";
 import pyt from "../../Asserts/pyt.png";
 import sql from "../../Asserts/sql3.png";
 import np from "../../Asserts/np.png";
