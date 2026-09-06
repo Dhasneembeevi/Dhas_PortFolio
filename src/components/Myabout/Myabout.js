@@ -174,7 +174,7 @@ const Myabout = () => {
           //   alt="logo"
           //   className="js"
           // />
-          <img src={js} alt="logo" className="js" />
+          < img src={js} alt="logo" className="js" />
           <img src={db} alt="logo" className="db" />
           <img src={exp} alt="logo" className="exp" />
           <img
