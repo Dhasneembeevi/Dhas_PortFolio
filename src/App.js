@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-// import Header from "./Header";
+import Header from "./Header";
 import "./App.css";
 import Certifications from "./components/Certifications/Certifications.js";
 import ReactGA from "react-ga4";
@@ -34,10 +34,10 @@ const App = () => {
     return null;
   };
 
-  // const toggleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  //   localStorage.setItem("darkMode", !darkMode);
-  // };
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem("darkMode", !darkMode);
+  };
 
   useEffect(() => {
     document.body.className = darkMode ? "dark" : "light";
@@ -48,7 +48,7 @@ const App = () => {
       <div className="portfolio-background"></div> {/* Background animation */}
       <div className="mainoverlay"></div>
       <div className="maincontent">
-    {/* <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode}*/}
+        <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         <PageTracker /> {/* Track page views using Google Analytics */}
         <Routes>
           <Route path="/" element={<Home />} />
