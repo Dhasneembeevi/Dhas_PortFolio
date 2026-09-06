@@ -160,14 +160,11 @@ const Myabout = () => {
       <div className="skillright">
         <div className="image-container">
           <img src={python} alt="logo" className="python" />
-
           <img src={pyt} alt="logo" className="pyt" />
           <img src={sql} alt="logo" className="sql" />
           <img src={np} alt="logo" className="np" />
           <img src={powerbi} alt="logo" className="powerbi" />
-
           <img src={html} alt="logo" className="html" />
-
           <img
             src="https://images7.webydo.com/90/9098746/3958/46d2d005-1b02-4961-aa1d-0aba7f7209bd.jpg"
             alt="logo"
@@ -185,7 +182,6 @@ const Myabout = () => {
             alt="logo"
             className="react"
           />
-
           <img src={node} alt="logo" className="node" />
         </div>
       </div>
