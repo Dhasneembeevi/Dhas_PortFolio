@@ -48,7 +48,7 @@ const App = () => {
       <div className="portfolio-background"></div> {/* Background animation */}
       <div className="mainoverlay"></div>
       <div className="maincontent">
-        // <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+    {/* <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode}*/}
         <PageTracker /> {/* Track page views using Google Analytics */}
         <Routes>
           <Route path="/" element={<Home />} />
