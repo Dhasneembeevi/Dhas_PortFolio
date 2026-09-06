@@ -41,9 +41,9 @@ const App = () => {
   //   localStorage.setItem("darkMode", !darkMode);
   // };
 
-  useEffect(() => {
-    document.body.className = darkMode ? "dark" : "light";
-  }, [darkMode]); // Dynamically set body className
+  // useEffect(() => {
+  //   document.body.className = darkMode ? "dark" : "light";
+  // }, [darkMode]); // Dynamically set body className
 
   return (
     <div>
