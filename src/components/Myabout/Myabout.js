@@ -172,12 +172,12 @@ const Myabout = () => {
             alt="logo"
             className="css"
           />
-          // <img
-          //   src="https://academyclass.com/wp-content/uploads/2021/10/Javascript.png"
-          //   alt="logo"
-          //   className="js"
-          // />
-          <img src={db} alt="logo" className="db" />
+          <img
+            src="https://academyclass.com/wp-content/uploads/2021/10/Javascript.png"
+            alt="logo"
+            className="js"
+          />
+
           <img src={db} alt="logo" className="db" />
           <img src={exp} alt="logo" className="exp" />
           <img
