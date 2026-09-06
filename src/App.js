@@ -15,12 +15,14 @@ const App = () => {
     ReactGA.initialize("G-CYSENCBGTE");
   }, []);
 
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode === "true") {
-      setDarkMode(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedMode = localStorage.getItem("darkMode");
+  //   if (savedMode === "true") {
+  //     setDarkMode(true);
+  //   }
+  // }, []);
+  // Always keep dark mode enabled 
+  useEffect(() => { document.body.className = "dark"; }, []);
   const usePageTracking = () => {
     const location = useLocation();
 
