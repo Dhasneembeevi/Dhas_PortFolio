@@ -174,7 +174,7 @@ const Myabout = () => {
             className="css"
           />
           <img
-            src="https://academyclass.com/wp-content/uploads/2021/10/Javascript.png"
+            src={js}
             alt="logo"
             className="js"
           />
