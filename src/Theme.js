@@ -45,16 +45,16 @@ export const ThemeProvider = ({ children }) => {
     return localStorage.getItem("darkMode") === "true";
   });
 
-  // useEffect(() => {
-  //   // Update body class whenever darkMode changes
-  //   if (darkMode) {
-  //     document.body.classList.add("dark");
-  //     document.body.classList.remove("light");
-  //   } else {
-  //     document.body.classList.add("light");
-  //     document.body.classList.remove("dark");
-  //   }
-  // }, [darkMode]); // Depend on `darkMode` state
+  useEffect(() => {
+    // Update body class whenever darkMode changes
+    if (darkMode) {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]); // Depend on `darkMode` state
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
