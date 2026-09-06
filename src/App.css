@@ -114,6 +114,6 @@ body.dark {
 }
 
 body.light {
-  --background-color: white;
-  --text-color: black;
+  --background-color: black;
+  --text-color: white;
 }
