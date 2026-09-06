@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import Header from "./Header";
+// import Header from "./Header";
 import "./App.css";
 import Certifications from "./components/Certifications/Certifications.js";
 import ReactGA from "react-ga4";
