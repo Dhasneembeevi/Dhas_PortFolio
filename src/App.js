@@ -10,7 +10,7 @@ import Certifications from "./components/Certifications/Certifications.js";
 import ReactGA from "react-ga4";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     ReactGA.initialize("G-CYSENCBGTE");
   }, []);
