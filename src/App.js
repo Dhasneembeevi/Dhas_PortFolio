@@ -36,10 +36,10 @@ const App = () => {
     return null;
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem("darkMode", !darkMode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  //   localStorage.setItem("darkMode", !darkMode);
+  // };
 
   useEffect(() => {
     document.body.className = darkMode ? "dark" : "light";
