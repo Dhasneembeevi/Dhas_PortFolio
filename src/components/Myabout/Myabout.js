@@ -3,6 +3,7 @@ import "./Myabout.css";
 import python from "../../Asserts/python.png";
 import html from "../../Asserts/html.png";
 import node from "../../Asserts/node.png";
+import css from "../../Asserts/css2.png";
 import exp from "../../Asserts/exp.png";
 import db from "../../Asserts/db.png";
 import js from "../../Asserts/js.png";
@@ -169,7 +170,7 @@ const Myabout = () => {
           <img src={html} alt="logo" className="html" />
 
           <img
-            src="https://images7.webydo.com/90/9098746/3958/46d2d005-1b02-4961-aa1d-0aba7f7209bd.jpg"
+            src={css}
             alt="logo"
             className="css"
           />
