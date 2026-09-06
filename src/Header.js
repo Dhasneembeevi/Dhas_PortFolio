@@ -7,10 +7,10 @@ const Header = () => {
 
   return (
     <header className="toggleMode">
-      // <label className="toggle-switch">
-      //   <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
-      //   <span className="slider"></span>
-      // </label>
+      <label className="toggle-switch">
+        <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
+        <span className="slider"></span>
+      </label>
     </header>
   );
 };
