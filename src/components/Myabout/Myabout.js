@@ -179,6 +179,7 @@ const Myabout = () => {
           />
 
           <img src={db} alt="logo" className="db" />
+          <img src={db} alt="logo" className="db" />
           <img src={exp} alt="logo" className="exp" />
           <img
             src="https://cdn.dribbble.com/users/14814/screenshots/16535574/reactlogo.png"
