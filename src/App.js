@@ -10,19 +10,17 @@ import Certifications from "./components/Certifications/Certifications.js";
 import ReactGA from "react-ga4";
 
 const App = () => {
-  // const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     ReactGA.initialize("G-CYSENCBGTE");
   }, []);
 
-  // useEffect(() => {
-  //   const savedMode = localStorage.getItem("darkMode");
-  //   if (savedMode === "true") {
-  //     setDarkMode(true);
-  //   }
-  // }, []);
-  // Always keep dark mode enabled 
-  useEffect(() => { document.body.className = "dark"; }, []);
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode === "true") {
+      setDarkMode(true);
+    }
+  }, []);
   const usePageTracking = () => {
     const location = useLocation();
 
@@ -36,14 +34,14 @@ const App = () => {
     return null;
   };
 
-  // const toggleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  //   localStorage.setItem("darkMode", !darkMode);
-  // };
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem("darkMode", !darkMode);
+  };
 
-  // useEffect(() => {
-  //   document.body.className = darkMode ? "dark" : "light";
-  // }, [darkMode]); // Dynamically set body className
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]); // Dynamically set body className
 
   return (
     <div>
